@@ -1,0 +1,35 @@
+---
+title: Dự án
+page: du-an
+---
+
+- projects_done = []
+- projects_other = []
+- sorted_articles.each do |post|
+	- if post[:categories].include? 'project'
+		-if post[:categories].include? 'done'
+			- projects_done << post
+		-else
+			- projects_other << post
+
+%div#da-wrapper
+	- if projects_done.length == 0 and projects_other.length == 0
+		%p Chưa có dự án nào!
+	- else
+		- if projects_done.length > 0
+			%div.da-caption Các dự án đã thực hiện:
+			%div#du-an
+				- projects_done.each do |post|
+					%p.da-link
+						=get_beauti_time(post)
+						\-
+						=link_to post[:title], post.path
+
+		- if projects_other.length > 0
+			%div.da-caption Các dự án trên kế hoạch:
+			%div#du-an
+				- projects_other.each do |post|
+					%p.da-link
+						=get_beauti_time(post)
+						\-
+						=link_to post[:title], post.path

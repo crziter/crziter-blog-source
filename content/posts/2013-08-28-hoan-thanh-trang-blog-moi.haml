@@ -1,0 +1,48 @@
+---
+title: "Hoàn thành trang blog mới!"
+created_at: 2013-08-28 12:46:44 +0700
+kind: article
+page: post
+categories:
+- nanoc
+- blog
+---
+
+%p 
+	%i Sau bao ngày vất vả nghiên cứu thằng nanoc khỉ gió, cuối cùng hôm nay cũng đã tạm coi như hoàn thành được trang blog này. HTML tĩnh hoàn toàn! Không có một cái gì gọi là "động" ở đây cả, có vẻ như thể loại này cũng thú vị và nó cũng không kém hơn loại web động là nhiêu. Làm blog bằng html tĩnh thì viết bài như thế nào được? Chẳng lẽ lại viết từng dòng html? Có vẽ như là thế nhưng mà cũng không hẳn, trang web tĩnh này được tự động sinh ra bằng chương trình nanoc, mình không cần phải viết từng dòng html nhưng mình lại có thể can thiệp được đến từng dòng được sinh ra và làm chủ được cách tổ chức, ...
+
+%h2 Có lợi ích gì?
+%p Dùng web tĩnh sẽ có các lợi ích sau:
+%ol
+	%li Hầu như mọi webserver đều chạy được :)) 
+	%li Khỏi sợ bị kẻ nào đó tấn công và đánh sập
+	%li Không cần những bộ phần mềm để xử lí CSDL, thông dịch những tập lệnh script
+	%li Thoát được nỗi lo phải cấu hình cho web chạy tốt
+	%li Nhìn có vẻ khác người :-s
+%p Tuy nhiên thì lợi ích cũng đi kèm với những hạn chế và một trong những hạn chế lớn nhất là mất đi những ưu điểm của một trang web động với CSDL và khả năng xử lí theo tình huống.
+
+%h2 Như thế nào?
+%p Cũng không đến nỗi vất vả như những dòng đầu đã ghi :D, chỉ là do hơi lạ và phải xem một ngôn ngữ mới là ruby... Có lẽ sẽ có một bài viết hướng dẫn chi tiết về việc tạo một trang như thế này sau nhưng nói chung là công việc sẽ theo thứ tự như thế này (việc biết html thì không cần phải đề cập):
+%ol
+	%li 
+		%strong Nghiên cứu ruby:
+		Đây là phần công việc không bắt buộc nếu bạn không có nhu cầu viết thêm những tính năng nâng cao mà nanoc không có sẵn
+	%li
+		%strong Học cách sử dụng nanoc:
+		Phần này bắt buộc vì ít nhất phải biết cách sử dụng chương trình sinh mới tạo ra được trang web chứ? Thực ra thì không chỉ có nanoc mà có rất nhiều chương trình để làm những việc đại loại như vậy nhưng mà theo ý kiến cá nhân thì nanoc khá là dễ sử dụng :-D
+	%li
+		%strong Viết một cái template:
+		Thấy chưa! Web tĩnh nhưng cũng có template! Đây là một bộ "khung sườn" cho trang web và cũng chính là thứ giúp chúng ta không phải viết từng dòng html khi viết bài, ngoài ra thì việc đó còn nhờ một thứ mà nanoc gọi là "filter", nó sẽ giúp ta giảm đi đáng kể công sức để viết bài mà có lẽ cũng chỉ ngang hoặc ít hơn công sức bỏ ra khi viết một bài trên các CMS hay forum.
+	%li
+		%strong Cấu hình vị trí của các files:
+		Việc này cũng không bắt buộc, nó chỉ cần làm khi bạn muốn trang web tĩnh nhưng được tổ chức tốt, nhìn ngầu hơn thôi
+	%li
+		%strong Viết bài:
+		Bây giờ là thời gian viết bài như tôi đang làm đây
+	%li
+		%strong Đưa trang web ra cho mọi người xem:
+		Đến đây thì công việc coi như xong
+%p Về cơ bản thì như thế thôi, và trang web sẽ chạy tốt mà không phải ngốn nhiều tài nguyên nếu có nhiều lượt truy cập cùng lúc.
+
+%h2 Kết luận
+%p Nói chung việc này cũng vui, khác người. Nếu ai mà rảnh rỗi có nhiều thời gian thì cũng tìm hiểu và làm cho biết thêm được và việc ứng dụng nó cho các trang web có lượng truy cập lớn cũng rất khả thi.

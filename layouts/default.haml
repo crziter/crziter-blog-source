@@ -1,0 +1,79 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title 
+      crziter's blog - #{@item[:title]}
+    %link{:rel => "stylesheet", :type =>"text/css", :href => "/css/common.css", :media => "screen"}
+    - if @item[:page] == 'index'
+      %link{:rel => "stylesheet", :type =>"text/css", :href => "/css/home.css", :media => "screen"}
+      %script{:language => 'javascript', :src => '/js/eye.js'}
+    -if @item[:page] == 'blog'
+      %link{:rel => "stylesheet", :type =>"text/css", :href => "/css/blog.css", :media => "screen"}
+    -if @item[:page] == 'chuyen-muc'
+      %link{:rel => "stylesheet", :type =>"text/css", :href => "/css/chuyen-muc.css", :media => "screen"}
+    -if @item[:page] == 'du-an'
+      %link{:rel => "stylesheet", :type =>"text/css", :href => "/css/du-an.css", :media => "screen"}
+    -if @item[:page] == 'post'
+      %link{:rel => "stylesheet", :type =>"text/css", :href => "/css/post.css", :media => "screen"}
+
+  %body{:onload => (@item[:page] == 'index' ? 'eye_init()' : nil)}
+    %header#global-header
+      %div#logo
+        %img#logo-image{:src=> "/images/avatar_small.png", :alt=>"Avatar"}
+        %span#logo-name Crziter
+        %div#clear-both
+
+      %div#nav-menu
+        %ul
+          %li
+            %a{:href => "/"} Trang chủ
+          %li
+            %a{:href => "/blog"} Blog
+          %li
+            %a{:href => "/chuyen-muc"} Chuyên mục
+          %li
+            %a{:href => "/du-an"} Dự án
+
+    %div#global-ctx
+      %section#global-section
+        -if @item[:page] == 'post'
+          %div#post-wrapper
+            %h1
+              = @item[:title]
+            %div#post-info
+              %span.date
+                Đăng ngày: 
+              = attribute_to_time(@item[:created_at]).strftime("%Y-%m-%d") 
+              %span.date
+                lúc: 
+              = attribute_to_time(@item[:created_at]).strftime("%H:%M:%S")
+              \.
+              %span.cat
+                Mục: 
+              = link_categories(@item[:categories]).join(', ')
+
+            %div#post-content
+              = yield
+        -else
+          = yield
+
+        -if @item[:page] == 'post'
+          %div#disqus_thread
+          %script{:type => "text/javascript"}
+            var disqus_shortname = 'crziter';
+
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          %noscript Please enable JavaScript to view the comments powered by Disqus.
+
+      %footer#global-footer
+        %div#footer-content
+          %p#copyright 
+            Designed 2013 by 
+            %a{:href => ""} crziter
+          %p#generate 
+            (generated on #{current_time})

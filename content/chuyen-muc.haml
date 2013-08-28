@@ -1,0 +1,12 @@
+---
+title: Chuyên mục
+page: chuyen-muc
+---
+
+%div#cm-wrapper
+	%div#cm-caption
+		Danh sách các chuyên mục:
+	%div#cm-content
+		-all_categories.each do |cat|
+			-if not (cat == 'blog' or cat == 'project' or cat == 'done')
+				%a{:href => "/chuyen-muc/#{cat}"}#{cat} (#{articles_with_category(cat).length})

@@ -1,0 +1,15 @@
+---
+title: Các bài blog
+page: blog
+---
+
+%div#blog-wrapper
+	%div#blog-caption
+		Các bài blog:
+	%div#blog-content
+	- sorted_articles.each do |post|
+		- if post[:categories].include? 'blog'
+			%p.blog-link
+				=get_beauti_time(post)
+				\-
+				=link_to post[:title], post.path

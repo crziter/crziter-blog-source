@@ -1,0 +1,48 @@
+---
+title: Trang chủ
+page: index
+---
+
+%div#crziter-title
+	%div#crziter-eye
+		%canvas#crziter-bk{:width => '350', :height => '350'}
+		%canvas#crziter-anime{:width => '350', :height => '350'}
+	%div#crziter-text
+		%p#crziter-name Crziter's blog
+		%p
+			%span.crziter-prop Tên:
+			%span.crziter-val Bình Nguyên
+		%p
+			%span.crziter-prop Tuổi:
+			%span.crziter-val 22
+		%p
+			%span.crziter-prop Nghề nghiệp:
+			%span.crziter-val student
+		%p
+			%span.crziter-prop Sở thích:
+			%span.crziter-val technology and related
+		%p
+			%span.crziter-prop Địa điểm:
+			%span.crziter-val Sài Gòn
+		%p
+			%span.crziter-prop Website:
+			%span.crziter-val 
+				%a{:href => '/'} http://crziter.github.io
+			
+	%div#clear-both
+
+%div#content-wrapper
+	%div#blog-introduce
+		Trang này có gì hay ho đâu? toàn mấy thứ vớ vẩn. Ai rảnh rỗi thì vô xem chơi, có thời gian thì comment, comment nhiều thì sẽ thêm đông vui, càng đông vui sẽ có nhiều thứ hay ho, có nhiều thứ hay ho sẽ hết vớ vẩn. Cái gì mà vớ vẩn thế này...
+		%hr/
+
+	- recent_posts = sorted_articles[0,9]
+	- if recent_posts.length > 0
+		%div#blog-recent
+			%div#recent-title Bài viết gần đây:
+			%div#recent-posts
+				- recent_posts.each do |post|
+					%p 
+						=get_beauti_time(post)
+						\-
+						=link_to post[:title], post.path
