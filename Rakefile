@@ -1,5 +1,7 @@
 require 'stringex'
 
+task :default => :new_post
+
 task :new_post do |t, args|
 	print "Is a project? [y/n]: "
 	prj = STDIN.gets.strip
