@@ -1,0 +1,67 @@
+---
+title: "Hướng dẫn sử dụng disqus cho phần comment"
+created_at: 2013-08-29 16:55:53 +0700
+kind: article
+page: post
+categories:
+- blog
+- disqus
+- web
+---
+
+%p
+	%i Một trang web muốn thu hút người đọc hoặc muốn thêm sinh động thì việc quan trọng là không thể thiếu phần bình luận, trong các CMS như wordpress,... công việc tạo và quản lí comment đã được tích hợp sẵn. Nhưng với các trang web mà tự viết từ đầu hoặc là trang web tĩnh như trang này thì có thể tiết kiệm thời gian hoặc xử lí được công việc bình luận bài viết bằng một sản phẩm từ hãng thứ ba là disqus
+
+%h2 Bắt đầu như thế nào?
+%p Giả sử bạn đã có một trang web, cần thêm phần bình luận và đang ở một trong các tình huống: không có điều kiện làm (webserver không hỗ trợ ngôn ngữ web nào, không có thời gian, etc) hoặc làm biếng.
+
+%p 
+	Đầu tiên, vào trang web
+	%a{:href => "http://disqus.com"} http://disqus.com
+	bấm vào nút "Add Disqus to Your Site" để đăng kí một tài khoản. Điền đầy đủ các thông tin mà trang web yêu cầu rồi bấm "Continue". Ở màn hình tiếp theo là để chọn nền tảng web mà bạn đang có, việc chọn này sẽ giúp cho việc quản lí dễ dàng hơn, vì vậy chọn nền tảng web mà bạn muốn đưa comment vào hoặc "Universal Code" nếu là trang tự viết hoặc không có nền tảng nào đúng cả. Sau đó, chính trang disqus cũng đưa ra những hướng dẫn để làm những việc tiếp theo...
+
+%h2 Lắp phần comment vào
+%p Như phần hướng dẫn khá chi tiết, chỉ cần copy đoạn code bạn thấy vào chổ cần comment xuất hiện là xong.
+
+%h2 Quản lí các tính năng và comment
+%p 
+	Disqus cung cấp một giao diện khá đồ sộ cho việc quản lí các tính năng và comment, chỉ cần đăng nhập vào trang
+	%strong username.disqus.com
+	bạn có thể tùy chỉnh giao diện, ngôn ngữ, hiển thị của phần comment và quản lí các comment của người đọc.
+
+%p Tới đây, về cơ bản thì một bộ comment đã được tích hợp vào trang web mà không phải tốn nhiều công sức.
+
+%h2 Một số tùy chỉnh có thể dùng tới
+%p Có thể có một số tính năng của disqus mà bạn thấy phiền hà hoặc là không cần dùng tới, khi đó cần đăng nhập vào trang quản lí và:
+%ul
+	%li
+		%strong Bỏ phần liệt kê các bài viết:
+		%p
+			Vào
+			%strong Settings
+			\->
+			%strong Discovery
+			ở chổ 
+			%strong Choose your Discovery level
+			chọn
+			%strong Just comments
+	%li
+		%strong Chọn ngôn ngữ Tiếng Việt:
+		%p
+			Vào
+			%strong Settings
+			\->
+			%strong General
+			ở chổ
+			%strong Language
+			chọn
+			%strong Vietnamese
+	%li
+		%strong Cho phép người dùng comment mà khỏi đăng nhập:
+		%p
+			Cũng ở trong
+			%strong General
+			mục
+			%strong Guest Commenting
+			đánh dấu tick vào
+			%strong  Allow guests to comment
