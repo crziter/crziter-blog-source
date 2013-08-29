@@ -11,13 +11,16 @@ page: index
 		%p#crziter-name Crziter's blog
 		%p
 			%span.crziter-prop Tên:
-			%span.crziter-val Bình Nguyên
+			%span.crziter-val Bình Nguyên (or vice versa)
 		%p
 			%span.crziter-prop Tuổi:
-			%span.crziter-val 22
+			%span.crziter-val 
+				- age = Time.now.year - 1991
+				= age
+				years old
 		%p
 			%span.crziter-prop Nghề nghiệp:
-			%span.crziter-val student
+			%span.crziter-val student (at SGU)
 		%p
 			%span.crziter-prop Sở thích:
 			%span.crziter-val technology and related
