@@ -1,0 +1,38 @@
+---
+title: "Phần mềm lên dây đàn trên GNU/Linux"
+created_at: 2013-08-29 17:42:50 +0700
+kind: article
+page: post
+categories:
+- blog
+- GNU/linux
+---
+
+%p
+	%i Chiều nay, sau một hồi phân vân tự hỏi liệu có phần mềm lên dây đàn nào cho hệ thống GNU/Linux không thì đến hỏi ông Google, ông ấy suy nghĩ một lúc rồi đưa ra danh sách một đống các phần mềm có tính năng đó, rồi ông ta còn recommended cái phần mềm có tên là lingot...
+
+%div.img-wrap
+	%div.image-center
+		%img{:src => "/images/posts/lingot.png"}/
+		%span.image-caption Giao diện của lingot
+
+%h2 Cài đặt
+%p 
+	Không biết trên các bản phân phối GNU/Linux khác như thế nào nhưng với Archlinux thì lingot không có trong kho phần mềm chính thức mà chỉ có trong kho phần mềm của người sử dụng. Để cài đặt, cần download gói đó về ở địa chỉ:
+	%a{:href => "https://aur.archlinux.org/packages/li/lingot/lingot.tar.gz"} https://aur.archlinux.org/packages/li/lingot/lingot.tar.gz
+	, sau đó giải nén ra và mở terminal lên, vào thư mục lingot vừa giải nén xong rồi gõ lệnh:
+
+%div.bash-command
+	%pre
+		makepkg -s -i
+
+%p Ngồi đợi một lát để chương trình tự download các gói cần thiết và mã nguồn của phần mềm về, biên dịch và cài đặt vào hệ thống. Kết thúc thì chương trình có thể sẽ hiện diện ở:
+%p
+	%strong Menu
+	\->
+	%strong Multimedia
+	\->
+
+	%strong Lingot
+%h2 Cảm nhận
+%p Xài rất tốt, đến giờ phút hiện tại thì chưa có vấn đề gì xảy ra cả :-D.
