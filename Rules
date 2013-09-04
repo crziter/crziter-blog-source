@@ -20,6 +20,9 @@ end
 compile '/css/*' do
 end
 
+compile '/projects/html/*' do
+end
+
 compile '/js/*' do
 end
 
